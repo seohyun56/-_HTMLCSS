@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Ex4</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1024px;
+            min-width: 960px;
+            background-color: blue;
+
+            position: fixed;
+            top:0; left:50%;
+            margin-left: -512px;
+            
+        }
+        h2 {
+            margin: 0;
+            width: 100px; height: 50px;
+            line-height: 50px;
+            background-color: lightpink;
+            color: white;
+            
+            position: absolute;
+            bottom: 10px; left: 10px;
+        }
+        #btn {
+            background-color: #000;
+            list-style: none;
+            width: 100px;
+        }
+        #btn li a {
+            text-decoration: none;
+            color: white;
+            background-color: cadetblue;
+            width: 70px; height: 20px;
+            line-height: 20px;
+            font-size: 13px;
+
+            position: absolute;
+            top: 0; right: 10px;
+        }
+        #btn li .signin {
+            right: 80px;
+        }
+        #btn li .signin:hover {
+            background-color: khaki;
+        }
+        #btn li .signup:hover {
+            background-color: khaki;
+        }
+        #gnb {
+            list-style: none;
+            width: 400px; height: 50px;
+        }
+        #gnb li {
+
+        }
+        #gnb li a {
+            text-decoration: none;
+            color: inherit;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: khaki;
+            font-size: 16px;
+            width: 80px; height: 30px;
+            line-height: 30px;
+
+            position: absolute;
+            bottom: 10px; right: 10px; 
+        }
+        #gnb li .menu1 {
+            right: 250px;
+        }
+        #gnb li .menu2 {
+            right: 170px;
+        }
+        #gnb li .menu3 {
+            right: 90px;
+        }
+        #gnb li .menu1:hover {
+            background-color: cadetblue;
+        }
+        #gnb li .menu2:hover {
+            background-color: cadetblue;
+        }
+        #gnb li .menu3:hover {
+            background-color: cadetblue;
+        }
+        #gnb li .menu4:hover {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        최대 가로: 1024 최소 가로: 960
+        마우스 이벤트
+        header 중앙 정렬
+    -->
+    <header>
+        <h2>로고</h2>
+        <ul id="btn">
+            <li><a href="#" class="signin">로그인</a></li>
+            <li><a href="#" class="signup">회원가입</a></li>
+        </ul>
+        <ul id="gnb">
+            <li><a href="#" class="menu1">menu 1</a></li>
+            <li><a href="#" class="menu2">menu 2</a></li>
+            <li><a href="#" class="menu3">menu 3</a></li>
+            <li><a href="#" class="menu4">menu 4</a></li>
+        </ul>
+    </header>
+</body>
+</html>

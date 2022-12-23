@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>margin padding Ex</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 18px;
+            font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+            font-weight: bold;
+        }
+        h1 {
+            background-color: dodgerblue;
+            border-radius: 30px 30px 0 0;
+            /*
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            */
+            border-bottom: 10px solid blue;
+            padding: 20px; 
+            width: 400px;
+            color: white;
+            margin: 50px auto 30px;
+        }
+        h2 {
+            text-decoration: line-through;
+        }
+        ul li {
+            padding: 10px;
+            width: 500px;
+            text-align: left;
+            border: 2px solid black;
+            margin: 5px auto;
+        }
+        .url {
+            background-color: navy;
+            text-decoration: none;
+            padding: 10px 0px;
+            min-width: 500px;
+            max-width: 70%;
+            margin: 1px auto;
+        }
+        .url a {
+            color: white;
+            text-decoration: none;
+        }
+        .url:hover {
+            background-color: yellow;
+        }
+        .url a:hover {
+            color: black;
+        }
+
+        .wrapper {
+            max-width: 70%;
+            min-width: 500px;
+            margin: 50px auto;
+        }
+        .wrapper .site {
+            background-color: aquamarine;
+            border-bottom: 1px solid white;
+            /*
+                "한 줄인 경우" 세로 중앙 정렬 방법
+                height와 line-height의 값을 동일하게 적용
+                폰트 사이즈의 크기가 큰 경우는 잘 안 됨
+            */
+            height: 50px;
+            line-height: 50px;
+        }
+        .wrapper .site a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>margin padding 연습 1</h1>
+    <h2>조건</h2>
+    <ul>
+        <li>마우스 이벤트</li>
+        <li>사이트 새창으로 이동</li>
+        <li>중앙정렬</li>
+    </ul>
+    <p class="url"><a href="https://www.naver.com" target="_blank">네이버</a></p>
+    <p class="url"><a href="https://google.com" target="_blank">구글</a></p>
+    <p class="url"><a href="https://www.daum.net" target="_blank">다음</a></p>
+
+    <div class="wrapper">
+        <div class="site"><a href="https://www.naver.com" target="_blank">네이버</a></div>
+        <div class="site"><a href="https://google.com" target="_blank">구글</a></div>
+        <div class="site"><a href="https://www.daum.net" target="_blank">다음</a></div>
+    </div>
+</body>
+</html>

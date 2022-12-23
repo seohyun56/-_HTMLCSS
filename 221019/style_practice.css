@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+body {
+    width: 1920px;
+
+}
+
+header {
+    background-color: darkolivegreen;
+}
+
+ul li {
+    display: inline-block ;
+    padding: 0 20px;
+}
+
+div {
+    text-align: center;
+}
+
+
+.contents1 {
+    background-color: darkkhaki;
+}
+.contents1 table {
+    text-align: left;
+}
+.contents1 table tr td img {
+    height: 300px;
+}
+
+.contents2 {
+    background-color: darkorchid;
+}
+.contents2 table tr td img {
+    height: 230px;
+}
+
+
+.contents3 {
+    background-color: darkseagreen;
+}
+.contents3 table {
+    text-align: left;
+}
+.contents3 table tr td img {
+    height: 310px;
+}
+
+footer {
+    background-color: darkgrey;
+}

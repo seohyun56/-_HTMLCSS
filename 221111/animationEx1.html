@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>animation Ex1</title>
+    <style>
+        @keyframes bg1 {
+            30% {
+                background-position: 0 50%;
+            }
+            60% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 30%;
+            }
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(-45deg, blue, orange, orangered, yellow);
+            background-size: 400%;
+            background-position: 100%, 50%;
+
+            animation: bg1 10s 0.5s infinite ease-in-out;
+        }
+        h1 {
+            margin: 0;
+            border: 3px solid #000;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>animation Ex1</h1>
+</body>
+</html>

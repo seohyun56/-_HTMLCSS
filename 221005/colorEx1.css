@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+body {
+    background-color: aquamarine;
+}
+h2 {
+    background-color: orange;
+}
+#title1 {
+    color: white;
+}
+#title2 {
+    color: aquamarine;
+}
+#title3 {
+    color: navy;
+}
+#title4 {
+    color: blue;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position: sticky 1</title>
+    <style>
+        body, h1, h2 {
+            margin: 0;
+        }
+        header, footer {
+            background-color: cadetblue;
+            height: 100px;
+            /* box-sizing: border-box; */
+            padding: 10px;
+        }
+        main {
+            background-color: aliceblue;
+            /* overflow: hidden; 자식에게 float 들어가면 높이값 인식하지 못하는 문제점 해결방법1 */
+            /* float: left; 방법2 */
+        }
+        /* main::after {} 방법3 */
+
+        /* 미리 만들어놓은 다음 필요할 때마다 html에 적용해 사용하기 위해서 */
+        .clearFix::after { /* 방법4 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+        main article {
+            background-color: cornflowerblue;
+            float: left;
+            width: 70%;
+            height: 3000px;
+        }
+        main aside {
+            background-color: lightseagreen;
+            float: left;
+            width: 30%;
+            height: 200px;
+
+            position: sticky;
+            /* 
+                부모 요소들 중 overflow: hidden이 적용되어 있으면 작동하지 않음 
+                height값이 %인 경우도 작동하지 않음
+            */
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>position: sticky</h1>
+        <h2>header</h2>
+    </header>
+    <main class="clearFix">
+        <article>
+            <h2>main contents</h2>
+        </article>
+        <aside>
+            <h2>sticky sidebar</h2>
+        </aside>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>

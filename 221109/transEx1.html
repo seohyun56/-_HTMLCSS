@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>trans Ex1</title>
+    <style>
+        .container {
+            border: 3px solid #000;
+            width: 95vw;
+            /* position: relative; */
+        }
+        .container .box {
+            width: 100px; height: 100px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 10px;
+            transition: 1s linear;
+            /* position: absolute;
+            left: 0; */
+        }
+        .container .box:nth-child(1) {
+            background-color: lightgreen;
+            /* top: 0; */
+        }
+        .container .box:nth-child(2) {
+            background-color: lightskyblue;
+            transition-delay: .7s;
+            /* top: 110px; */
+        }
+
+        .container:hover .box {
+            /* margin-left: calc(95vw - 100px - 10px); */
+            /* left: calc(95vw - 100px - 10px); position */
+            transform: translateX( calc(95vw - 120px) ) rotate(1080deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>trans Ex1</h1>
+    <!-- 컨테이너 위에 마우스를 올리면 박스 굴러서 이동 -->
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+    </div>
+</body>
+</html>

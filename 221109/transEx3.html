@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>trans Ex3</title>
+    <style>
+        body {
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .gnb {
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            background-color: royalblue;
+            display: flex;
+            /* justify-content: space-around; */
+            width: 800px;
+        }
+        .gnb li {
+            width: 25%;
+            /* flex-grow: 1; */
+        }
+        .gnb li a {
+            display: block;
+            text-decoration: none;
+            color: yellow;
+            height: 50px;
+            line-height: 50px;
+
+            position: relative;
+        }
+        .gnb li a::after {
+            content: "";
+            width: 0; height: 10px;
+            background-color: lightgreen;
+            position: absolute;
+            left: 0; bottom: 0;
+            transition: .5s;
+            opacity: 0;
+        }
+        .gnb li a:hover::after {
+            width: 100%;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 해당 메뉴 위에 마우스를 올리면 왼쪽에서 오른쪽으로 바 진행 -->
+    <ul class="gnb">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout Ex3</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            float: left;
+        }
+        .box {
+            margin: 30px auto;
+            width: 940px;
+            height: 60px; line-height: 60px;
+        }
+
+        nav {
+            background-color: lightblue;
+        }
+        nav #gnb {
+            /* background-color: #ddd; */
+            width: 600px;
+            margin: 0 auto;
+
+            /* overflow: hidden; */
+        }
+        /* .clearFix */
+        nav #gnb::after { /* gnb에만 클리어픽스 적용 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+        nav #gnb a {
+            display: block;
+            width: 120px;
+            color: #000;
+        }
+        nav #gnb a:hover {
+            background-color: lightseagreen;
+            color: white;
+        }
+        
+        article.box { /* 종속선택자 box 안 붙이면 위에 적용한 .box에 우선순위가 밀려서 높이값 적용 x */
+            background-color: lightgreen;
+            height: 100px; line-height: 100px;
+        }
+        article h2 {
+            margin: 0;
+        }
+        #wrapper li {
+            background-color: lightskyblue;
+            width: 300px;
+        }
+        #wrapper li:nth-child(2) { /* #wrapper 안에 있는 두 번째 li에 마진값 적용 */
+            margin: 0 20px;
+        }
+        footer {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>로고</h1>
+    <nav class="box">
+        <ul id="gnb">
+            <li><a href="#">홈</a></li>
+            <li><a href="3">상품</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+    </nav>
+    <article class="box">
+        <h2>컨텐츠</h2>
+    </article>
+    <ul id="wrapper" class="box">
+        <li>1번째 열</li>
+        <li>2번째 열</li>
+        <li>3번째 열</li>
+    </ul>
+    <footer class="box">&copy; copyright 2022</footer>
+</body>
+</html>

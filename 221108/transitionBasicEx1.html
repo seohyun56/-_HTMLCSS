@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transition basic Ex1</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: lightgreen;
+            margin: 100px auto;
+
+            /* transition-property: width. height, border-radius; */
+            transition-property: all; /* 모든 속성 */
+            transition-duration: 1s;
+        }
+        .box:hover {
+            width: 500px; height: 500px;
+            border-radius: 50%;
+        }
+        .box:active {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

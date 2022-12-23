@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Ex3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            text-align: center;
+            margin: 0;
+            font-family: 'DM Serif Display', serif;
+        }
+        ul {
+            background-color: white;
+            width: 480px;
+            padding: 0;
+            margin: 0 auto;
+            border-bottom: 3px solid steelblue;
+            border-radius: 0 0 20px 20px;
+
+            position: fixed;
+            left: 50%;
+            margin-left: -240px;
+        }
+        ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 30px;
+        }
+        ul .li1 {
+            background-color: lightseagreen;
+        }
+        ul .li2 {
+            background-color: lightgreen;
+        }
+        ul .li3 {
+            background-color: lightskyblue;
+        }
+        ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+        section {
+            height: 500px;
+            padding: 50px;
+        }
+        #sec1 {
+            background-color: yellow;
+        }
+        #sec2 {
+            background-color: orange;
+        }
+        #sec3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="li1"><a href="#sec1">section1</a></li><li class="li2"><a href="#sec2">section2</a></li><li class="li3"><a href="#sec3">section3</a></li>
+    </ul>
+    <section id="sec1">
+        <h1>section1</h1>
+    </section>
+    <section id="sec2">
+        <h1>section2</h1>
+    </section>
+    <section id="sec3">
+        <h1>section3</h1>
+    </section>
+</body>
+</html>

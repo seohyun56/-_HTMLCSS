@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries Ex4</title>
+    <link rel="stylesheet" href="./animation.css">
+    <style>
+        .apple_watch {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: 50px auto;
+        }
+        .apple_watch img {
+            /* max-width: 70%; */
+            width: clamp(300px, 50%, 500px); 
+            /* 
+                clamp(최소값, 기준값, 최대값);
+
+                clamp(300px, 50%, 500px); 
+                최소 300 이하로 작아지지 않음,
+                현재 화면 크기의 50%의 크기로 유지하되 300보다 크고 500보다는 작음,
+                최대 500 이상으로 커지지 않음
+            */
+            /* animation: mov1 3s infinite alternate linear; */
+            animation: mov2 3s infinite;
+
+            aspect-ratio: auto 4 / 3; 
+            /* 
+                원래 비율값이 있으면 그 값이 적용되고 없으면 4:3의 비율 유지 
+                min-, max- 특성이 적용된 경우, flex에서도 일부, 컨텐츠가 넘치는 경우 동작 x
+            */
+        }
+        .apple_watch figcaption em {
+            display: block;
+            font-style: normal;
+            margin: 20px 0 10px;
+        }
+    </style>
+    <link rel="stylesheet" media="(min-width:768px)" href="./mqEx4.css">
+</head>
+<body>
+    <figure class="apple_watch">
+        <img src="./images/applewatch.png" alt="애플워치">
+        <figcaption>
+            <em>Apple Watch</em>
+            <strong>모험을 위한 시간.</strong>
+            <p class="price">₩599,000부터</p>
+            <p>역대 최강의 내구성과 최고의 기능성을 자랑하는 Apple Watch의 탄생.</p>
+            <p>두툼한 티타늄 케이스, 정밀 이중 주파수 GPS, 최대 36시간의 배터리 사용 시간,1 셀룰러 연결이 주는 자유,2 여기에 모든 분야에서 한계에 도전하는 이를 위해 만들어진 세 가지 전용 밴드까지 선보입니다.</p>
+        </figcaption>
+    </figure>
+</body>
+</html>

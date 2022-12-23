@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout Ex3</title>
+    <style>
+        .container {
+            text-align: center;
+            font-weight: bold;
+        }
+        .gnb {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+            width: 940px; height: 60px;
+            line-height: 60px;
+            background-color: lightblue;
+
+            overflow: hidden;
+        }
+        .gnb li {
+            float: left;
+        }
+        .gnb li a {
+            display: block;
+            width: 100px;
+            color: #000;
+            text-align: center;
+        }
+        .gnb li a:hover {
+            background-color: lightseagreen;
+            color: white;
+        }
+        .container main {
+            overflow: hidden;
+        }
+        .container main article {
+            background-color: lightskyblue;
+            width: 940px; height: 60px;
+            line-height: 60px;
+            margin: 30px auto;
+        }
+        .container main aside {
+            width: 300px; height: 60px;
+            background-color: lightgreen;
+            float: left;
+            margin: 0px 10px;
+        }
+        .container footer {
+            background-color: lightpink;
+            width: 940px; height: 60px;
+            line-height: 60px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>로고</h1>
+        <ul class="gnb">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">상품</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+        <main>
+            <article>
+                <p>컨텐츠</p>
+            </article>
+            <aside>
+                <p>1번째 열</p>
+            </aside>
+            <aside>
+                <p>2번째 열</p>
+            </aside>
+            <aside>
+                <p>3번째 열</p>
+            </aside>
+        </main>
+        <footer>
+            <p>copyright 2022</p>
+        </footer>
+    </div>
+</body>
+</html>

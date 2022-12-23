@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex item: oreder</title>
+    <style>
+        .container {
+            font-weight: bold;
+            font-size: 1.3em;
+            text-align: center;
+            list-style: none;
+            border: 6px solid #000;
+            width: 80vw; height: 50vh;
+            /* 컨테이너, 아이템 중앙정렬 */
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container .box {
+            width: 10%;
+            padding: 5px;
+        }
+        /* 
+            order: flex-item에 적용되는 특성으로 아이템 배치 순서 설정 
+            flex-container에 flex가 적용되어있어야 사용 가능
+        */
+        .container .item1 {
+            background-color: cornflowerblue;
+            order: 3
+        }
+        .container .item2 {
+            background-color: lightpink;
+            order: 2
+        }
+        .container .item3 {
+            background-color: lightgreen;
+            order: 1
+        }
+        .container .item4 {
+            background-color: lightskyblue;
+            order: 7
+        }
+        .container .item5 {
+            background-color: lightseagreen;
+            order: 5
+        }
+        .container .item6 {
+            background-color: violet;
+            order: 4
+        }
+        .container .item7 {
+            background-color: khaki;
+            order: 6
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li class="box item1">item1</li>
+        <li class="box item2">item2</li>
+        <li class="box item3">item3</li>
+        <li class="box item4">item4</li>
+        <li class="box item5">item5</li>
+        <li class="box item6">item6</li>
+        <li class="box item7">item7</li>
+    </ul>
+</body>
+</html>

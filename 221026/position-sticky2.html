@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position: sticky 2</title>
+    <style>
+        .clearFix::after { 
+            content: "";
+            display: block;
+            clear: both;
+        }
+        body, h1, h2 {
+            margin: 0;
+        }
+
+        header, footer {
+            background-color: cadetblue;
+            height: 100px;
+            padding: 10px;
+        }
+        main {
+            background-color: aliceblue;
+            border: 10px solid #000;
+        }
+        main aside {
+            background-color: lightseagreen;
+            float: left;
+            width: 20%;
+            height: 3000px;
+        }
+        main article {
+            background-color: cornflowerblue;
+            float: left;
+            width: 80%;
+            height: 800px;
+            font-size: 25px; font-weight: bold;
+            position: relative;
+        }
+        main article .relative {
+            background-color: springgreen;
+            padding: 4px 10px;
+            float: left;
+            position: relative; /* realtive와 float 동시에 적용시 float 인식 */
+            top: 20px;
+        }
+        main article .fixed {
+            background-color: forestgreen;
+            padding: 4px 10px;
+            float: left;
+            position: fixed; /* fixed와 float 동시 적용시 포지션 인식 */
+            left: 117px;
+            top: 130px;
+        }
+        main article .absolute {
+            background-color: chartreuse;
+            padding: 4px 10px;
+            float: left;
+            position: absolute; /* absolute와 float 동시 적용시 포지션 인식 */
+            top: 0; left: 185px;
+        }
+        main article .sticky {
+            background-color: limegreen;
+            padding: 4px 10px;
+            float: left;
+            position: sticky; /* 부모 요소가 스크롤에 따라 화면 밖으로 넘어가면 함께 넘어감 */
+            top: 0; left: 316px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>position: sticky 2</h1>
+        <h2>header</h2>
+    </header>
+    <main class="clearFix">
+        <article>
+            <div class="relative">relative</div>
+            <div class="fixed">fixed</div>
+            <div class="absolute">absolute</div>
+            <div class="sticky">sticky</div>
+        </article>
+        <aside>
+            <h2>aside</h2>
+        </aside>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>

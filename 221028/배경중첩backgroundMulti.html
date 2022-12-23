@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>배경 중첩 background Multi</title>
+    <style>
+        body {
+            text-align: center;
+
+            /* 
+            - 중첩은 쉼표로 구분. 먼저 작성된 값이 위에 보여짐 -
+            background-image: url(./images/line.jpg), url(./images/more-leaves.png);
+            background-repeat: no-repeat, repeat;
+            - 여기까지 작성시 body 영역이 h1까지밖에 안 되기 때문에 이미지가 중앙에 오지 않음 -
+            background-position: 50%; 쉼표 없이 작성시 둘 다 적용
+
+            background-attachment: fixed, scroll;
+            background-size: 900px, auto;
+            */
+
+            background: 
+                url(./images/line.jpg) no-repeat fixed 50% / 900px,
+                url(./images/more-leaves.png);
+        }
+    </style>
+</head>
+<body>
+    <h1>배경 중첩 background Multi</h1>
+</body>
+</html>

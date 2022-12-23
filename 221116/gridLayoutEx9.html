@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex10</title>
+    <style>
+        .container {
+            border: 1px solid #000;
+            width: 80vw;
+            margin: 20px auto;
+            padding: 2vw;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 15px 1px #777;
+        }
+        .container header {
+            border-bottom: 1px solid #000;
+            display: flex;
+            justify-content: space-around;
+        }
+        .container header address { /* 플렉스 아이템 */
+            order: 3;
+            /* align-self: flex-end; */
+            margin-top: auto; 
+            margin-bottom: 15px;
+        }
+        .container header address span {
+            background-color: rgba(65, 105, 225, 0.788);
+            color: white;
+        }
+        .container .grid_container {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 1.5vw;
+            place-items: center;
+            grid-auto-rows: 20vw;
+            grid-template-columns: repeat(3, minmax(20vw, 1fr));
+        }
+        .container .grid_container li {
+            font-weight: bold;
+            font-size: 1.5em;
+            border-radius: 50%;
+            width: 20vw; height: 20vw;
+            display: grid;
+            place-items: center;
+        }
+        .container .grid_container .item1 {
+            background-color: lightskyblue;
+        }
+        .container .grid_container .item2 {
+            background-color: lightgreen;
+        }
+        .container .grid_container .item3 {
+            background-color: lightpink;
+        }
+        .container .grid_container .item4 {
+            background-color: lightblue;
+        }
+        .container .grid_container .item5 {
+            background-color: khaki;
+        }
+        .container .grid_container .item6 {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <address>경기도 수원시 팔달구 <span>더조은컴퓨터아카데미</span></address>
+            <ul>
+                <li>list1-1</li>
+                <li>list1-2</li>
+                <li>list1-3</li>
+                <li>list1-4</li>
+            </ul>
+            <ul>
+                <li>list2-1</li>
+                <li>list2-2</li>
+                <li>list2-3</li>
+                <li>list2-4</li>
+            </ul>
+        </header>
+        <ul class="grid_container">
+            <li class="item1">item</li>
+            <li class="item2">item</li>
+            <li class="item3">item</li>
+            <li class="item4">item</li>
+            <li class="item5">item</li>
+            <li class="item6">item</li>
+        </ul>
+    </div>
+</body>
+</html>

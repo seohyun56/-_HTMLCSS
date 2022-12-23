@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex Ex3</title>
+    <style>
+        body {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        /* .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        } */
+        .container header {
+            background-color: lightskyblue;
+            height: 14vh;
+        }
+        .container nav {
+            background-color: lightpink;
+            padding: 1vh;
+            width: calc(100% - 2vh);
+            height: 4vh;
+        }
+        .container main { /* flex container */
+            display: flex;
+            height: 80vh; /* 100vh - header 14vh - nav 4vh - nav padding 2vh */
+            /* flex-grow: 1; 플렉스 아이템에 적용시키는 증가비율 조절 특성. */
+        }
+        .container main aside {
+            background-color: lightgreen;
+            width: 30%; 
+        }
+        .container main article {
+            background-color: lightcoral;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <nav>navigation</nav>
+        <main> <!-- flex container -->
+            <aside>aside</aside> <!-- flex item -->
+            <article> <!-- flex item -->
+                <h2>contents</h2>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex5</title>
+    <style>
+        .box { /* 그리드 컨테이너 */
+            width: 50vw; height: 50vw;
+            margin: 50px auto;
+            background-color: royalblue;
+            display: grid;
+            place-items: center;
+        }
+        .box .item { /* 그리드 아이템 / 플렉스 컨테이너 */
+            background-color: lightgreen;
+            font-weight: bold;
+            font-size: 5em;
+            width: 35%; height: 35%;
+            border-radius: 50%;
+
+            transform: rotate(90deg);
+            /* 중앙정렬 방법1
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            */
+            /* 방법2
+            display: grid;
+            place-items: center; 
+            */
+            text-align: center;
+            line-height: 1.95;
+
+            box-shadow: 5px -5px #424242;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">:)</div>
+    </div>
+</body>
+</html>

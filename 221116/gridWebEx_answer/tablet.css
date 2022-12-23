@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/********** header **********/
+.container header {
+    padding: 2% 4%;
+}
+.container header #toggle_btn {
+    display: none;
+}
+.container header #gnb {
+    display: flex;
+    width: auto; /* 초기화, 무력화 */
+
+    /* 포지션을 활용한 위치 선정
+    top: 50%; right: 0; left: auto;
+    transform: translateY(-50%); 
+    */
+
+    position: static; /* 초기화. 포지션에서 무력화 */
+}
+.container header #gnb a {
+    border: none;
+    padding: 0 0 0 3vw;
+}
+
+/********** register **********/
+.container #register {
+    justify-content: flex-start;
+}
+.container #register li {
+    width: 10vw;
+}
+.container #register li:nth-child(3) {
+    margin-left: auto; /* item을 개별적으로 제어하고자 할 때 */
+}
+.container #register a {
+    height: 40px;
+    line-height: 40px;
+}
+
+/********** main **********/
+.container main {
+    /* 4열 */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 25vw;
+}
+
+/* box */
+.container main .box1 {
+    grid-column: 1 / 4;
+}
+.container main .box2 {
+    grid-column: 4 / 5;
+    background-color: #fff;
+    color: #000;
+}
+.container main .box2 span {
+    display: none;
+}
+.container main .box3 {
+    display: block;
+    background-color: var(--bg-color);
+    color: #fff;
+}
+.container main .box3 h3 {
+    font-size: 1.7em;
+}
+.container main .box3 span {
+    display: block;
+    color: #fff;
+    right: 0; bottom: 0;
+    font-size: 13em;
+    animation: rotate 5s infinite linear;
+}
+.container main .box4 {
+    display: block;
+}
+.container main .box6 {
+    grid-column: 3 / 5; /* -1 / -3 */
+}
+.container main .box7, .container main .box10 {
+    display: block;
+    grid-column: 1 / 3;
+}
+/* txt */
+.container main .txt {
+    padding: 3vw;
+}
+
+/********** footer **********/
+.container footer {
+    text-align: left;
+    padding: 0 2%;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex10</title>
+    <style>
+        body {
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .container { /* 그리드 컨테이너 */
+            width: 94%;
+            margin: 30px auto;
+            /* border: 3px solid #000; */
+            display: grid;
+            /* 4행 3열 */
+            grid-template: 40px 1fr 1fr 40px / 40px 1fr 40px;
+        }
+
+        .container .vertical_txt {
+            /* 세로글자 */
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: 2px;
+        }
+
+        .container header, .container footer { /* 그리드 아이템 */
+            border: 3px solid #000;
+            /* grid-column: 1 / 5; */
+            /* grid-column: 1 / span 4; */
+            grid-column: 1 / -1;
+
+            /* 글자 중앙정렬 방법1
+            line-height: 40px; 
+            */
+            /* 방법2
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            */
+            display: grid;
+            place-items: center;
+        }
+
+        .container .menu_side1 { /* 그리드 아이템 */
+            border: 3px solid #000;
+            border-top: none;
+            background-color: royalblue;
+            color: white;
+            /* display: grid;
+            place-items: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .menu_side1 .menu {
+            margin: 10px 0;
+        }
+        .container .menu_side2 { /* 그리드 아이템 */
+            border-right: 3px solid #000;
+            border-left: 3px solid #000;
+            background-color: lightskyblue;
+            grid-column: 1 / 2;
+        }
+
+        .container .video_wrapper {
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+            position: relative;
+            overflow: hidden;
+        }
+        .container .video_wrapper video {
+            object-fit: cover; /* 비율을 유지한 채 여백없이 채움 */
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container .video_wrapper h2 {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: white;
+        }
+        :is(.container) .txt_side1, .txt_side2 {
+            border-right: 3px solid #000;
+            border-left: 3px solid #000;
+            background-color: lightskyblue;
+            /* grid-column: 3 / 4; */
+            grid-column: -1 / -2;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .txt_side2 {
+            grid-row: 3 / 4;
+            background-color: royalblue;
+            border-top: 3px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+
+        <aside class="menu_side1 vertical_txt">
+            <span class="menu">menu1</span>
+            <span class="menu">menu2</span>
+            <span class="menu">menu3</span>
+        </aside>
+        <aside class="menu_side2"></aside>
+
+        <div class="video_wrapper">
+            <video src="./images/sampleV.mp4" muted autoplay loop></video>
+            <h2>video</h2>
+        </div>
+
+        <aside class="txt_side1 vertical_txt">item1</aside>
+        <aside class="txt_side2 vertical_txt">item2</aside>
+
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

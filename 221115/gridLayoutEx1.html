@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex1</title>
+    <style>
+        .box {
+            font-weight: bold;
+            font-size: 1.3em;
+            width: 80vw; height: 60vh;
+            margin: 50px auto;
+            border: 6px solid royalblue;
+
+            display: grid;
+            grid-template-columns: minmax(200px, 25%) 1fr;
+        }
+        .box .item:nth-child(1) {
+            background-color: lightgreen;
+        }
+        .box .item:nth-child(2) {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">min: 200px / max: 25%</div>
+        <div class="item">item2</div>
+    </div>
+</body>
+</html>

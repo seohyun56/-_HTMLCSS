@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'KOFIHDrLEEJW';
+    src: url(../common/fonts/KOFIHDrLEEJWTTF-L.woff) format('woff'),
+    url(../common/fonts/KOFIH\ DrLEEJW_TTF-L.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tenada';
+    src: url(../common/fonts/Tenada.woff) format('woff'),
+    url(../common/fonts/Tenada.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* pretendard */
+@font-face {
+    font-family: 'Pretendard';
+    src: url(../common/fonts/PretendardVariable.woff2) format('woff2');
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}

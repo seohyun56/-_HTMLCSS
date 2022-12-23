@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>trans Ex6</title>
+    <style>
+        .product {
+            text-align: center;
+            font-size: 1.3em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* border: 3px solid #000; */
+            
+            display: flex;
+            justify-content: center;
+        }
+
+        .product li {
+            width: 400px;
+            width: 20.833vw; height: 20.833vw;
+            margin: 10px;
+            margin: 0.521vw;
+
+            overflow: hidden; /* 지정된 영역을 벗어나면 보이지 않게 하기 위해 */
+        }
+        .product li img {
+            width: 100%; 
+            vertical-align: top;
+        }
+        .product li .txt {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 30px 10px;
+            padding: 1.563vw 0.521vw;
+            height: 20.833vw;
+            box-sizing: border-box;
+            
+            transition: .7s;
+        }
+        .product li:hover .txt {
+            transform: translateY(-20.833vw);
+        }
+        .product li .txt h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>trans Ex6</h1>
+    <ul class="product">
+        <li>
+            <img src="./images/phonecase.jpg" alt="폰케이스">
+            <div class="txt">
+                <h3>핸드폰 케이스</h3>
+                <p>설명</p>
+                <p>가격: 2억 5000만원</p>
+            </div>
+        </li>
+        <li>
+            <img src="./images/phone.png" alt="그립톡">
+            <div class="txt">
+                <h3>핸드폰 그립톡</h3>
+                <p>설명</p>
+                <p>가격: 1억 5000만원</p>
+            </div>
+        </li>
+        <li>
+            <img src="./images/sneakers.jpg" alt="스니커즈">
+            <div class="txt">
+                <h3>운동화</h3>
+                <p>설명</p>
+                <p>가격: 5000만원</p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

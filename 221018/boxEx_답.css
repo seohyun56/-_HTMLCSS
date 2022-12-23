@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Noto Sans KR', -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #efefef;
+}
+
+.container {
+    /*  
+        요소의 실제 크기
+        w980 + m0 + p(10 + 10) + b(4 + 4) = 1008px
+    */
+    max-width: 980px; /* 980 이상 커지지 않음 */
+    /* max-width: 952px; 실제 크기 w952 + m0 + p(10 + 10) + b(4 + 4) = 980px */
+    min-width: 600px; /* 600 이하 작아지지 않음 */
+    
+    box-sizing: border-box;
+
+    margin: 18px auto;
+    padding: 30px 10px 60px;
+    
+    border: double #000 4px;
+    background-color: #fff;
+}
+.container h1 {
+    /* background-color: aqua;
+    text-align: center; */
+    margin: 0 auto;
+    width: 150px;
+}
+.container #gnb {
+    /* text-align: center; li가 인라인-블록이기 때문에 li가 중앙 정렬 됨 */
+    margin: 20px auto;
+    width: 522px;
+
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000; 
+    padding: 14px 38px;
+    /* background-color: orange; */
+}
+.container #gnb li {
+    display: inline-block;
+    /* margin: 10px 20px;
+    padding: 10px 20px; */
+    width: 100px;
+    /* background-color: orange; */
+    text-align: center;
+}
+.container #gnb li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+.container #gnb li a:hover,
+.container #gnb li.active a { /* 종속선택자 */
+    color: red;
+}
+
+.container figure {
+    width: 600px;
+    margin: 0 auto;
+    /* background-color: orange; */
+    text-align: right;
+}
+.container figure figcaption {
+    display: inline;
+    background-color: #000;
+    color: white;
+    line-height: 2;
+}
+
+.container p {
+    width: 48.9795%;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 auto;
+}

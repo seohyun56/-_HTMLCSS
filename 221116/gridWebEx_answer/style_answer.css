@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* 모바일 */
+html {
+    font-family: 'Pretendard', -apple-system,BlinkMacSystemFont,helvetica,"Apple SD Gothic Neo",Arial,sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: capitalize;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container { /* grid-container */
+    display: grid;
+}
+
+/********** header **********/
+.container header { /* grid-item */
+    order: 2;
+    background-color: var(--bg-color);
+
+    position: sticky;
+    top: 0;
+    padding: 4%; /* 390vw 16px (pixel to vw) */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.container header #logo a {
+    background: url(./images/logo2.png) var(--bg-contain);
+    display: block;
+    width: 52px; height: 56px;
+    text-indent: var(--txt-indent);
+}
+.container header #gnb {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: absolute;
+    top: 100%; left: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: none;
+}
+.container header #gnb.active {
+    display: block;
+}
+.container header #gnb a {
+    display: block;
+    border-bottom: 1px solid #fff;
+    padding: 2.2vw 3vw;
+}
+.container header #gnb a span {
+    vertical-align: top;
+    margin-right: 5px;
+}
+.container header #toggle_btn {
+    display: block;
+    background: url(./images/bars-solid.svg) var(--bg-contain);
+    text-indent: var(--txt-indent);
+    width: 30px; height: 30px;
+}
+.container header #info, .container header #sns {
+    display: none;
+}
+
+/********** register **********/
+.container #register { /* grid-item / flex-container */
+    order: 1;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    /* height: 30px; a에 높이값을 넣어두면 부모는 자식의 높이값을 가져오므로 생략 가능 */
+
+    display: flex;
+    justify-content: space-around;
+}
+.container #register li { /* flex-item */
+    width: 100%;
+}
+.container #register a {
+    display: block;
+    /* height: 100%;
+    display: grid;
+    place-items: center; */
+    height: 30px; 
+    line-height: 30px;
+    text-align: center;
+}
+
+/********** main **********/
+.container main { /* grid-item / grid-container */
+    order: 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50vw;
+    color: #000;
+}
+.container main section {
+    position: relative; /* 모든 박스의 기준 */
+    overflow: hidden;
+}
+
+/* .bg 공통 */
+.container main .bg {
+    background: var(--bg-cover);
+}
+
+/* 모바일에서 숨긴 박스: box3, box4, box7, box10 */
+.container main .box1 {
+    background: url(./images/dogcat.jpeg) var(--bg-cover);
+
+    grid-column: span 2;
+    grid-row: span 2; /* 1 / 3 */
+}
+.container main .box1 h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 8em;
+    font-weight: 700;
+    font-style: italic;
+    /* white-space: nowrap; 줄바꿈 안 됨 */
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.container main .box3 {
+    display: none;
+}
+.container main .box4 {
+    display: none;
+    background-image: url(./images/dog5.jpg);
+}
+.container main .box5 {
+    background-image: url(./images/선반.jpg);
+}
+.container main .box7 {
+    display: none;
+    background-image: url(./images/매거진.jpg);
+}
+.container main .box9 {
+    color: #fff;
+    background-image: url(./images/사물.jpg);
+}
+.container main .box10 {
+    display: none;
+    background-image: url(./images/방오브제.jpg);
+}
+.container main .box12 {
+    background-image: url(./images/오브제.jpg);
+}
+
+/* .txt 공통 */
+.container main .txt {
+    padding: 6vw;
+}
+.container main .txt span, .container main .bg h3 {
+    color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    display: none;
+}
+.container main h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 3vw;
+}
+.container main p {
+    line-height: 1.5;
+}
+.container main .box2 {
+    background-color: var(--bg-color);
+    color: #fff;
+    grid-column: 1 / 3; /* span 2 */
+}
+.container main .box2 h3 {
+    font-size: 2.2em;
+}
+.container main .box2 span {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 40vw;
+    right: 0; bottom: 0;
+}
+
+/********** footer **********/
+.container footer { /* grid-item */
+    order: 4;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--bg-color);
+}

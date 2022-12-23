@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>table style Ex2</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        table caption {
+            background-color: darkcyan;
+            color: white;
+            font-weight: bold;
+            padding: 4px 0;
+        }
+        table td {
+            border: 2px solid darkcyan;
+            background-color: wheat;
+            border-top: none;
+            width: 140px;
+        }
+        table td .block {
+            display: block;
+            font-size: 14px;
+        }
+        table td a {
+            background-color: red;
+            color: white;
+            text-decoration: none;
+        }
+        table td a:hover {
+            background-color: white;
+            color: red;
+        }
+        table .empty {
+            background-color: white;
+        }
+        table .feet td {
+            background-color: khaki;
+            border-top: 5px solid darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>table style 연습 2</h1>
+    <table>
+        <caption>소 cow</caption>
+        <tbody>
+            <tr>
+                <td>소머리</td>
+                <td>목심</td>
+                <td>등심<span class="block">(살치살 &middot; <a href="#">꽃등심</a>)</span></td>
+                <td>채끝살</td>
+                <td>우둔<span class="block">(홍두깨살)</span></td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="empty"></td>
+                <td rowspan="2">앞다리<span class="block">(부채살)</span></td>
+                <td>갈비<span class="block">(안창살 &middot; 제비추리)</span></td>
+                <td>안심</td>
+                <td rowspan="2">설도<span class="block">(도가니살)</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">양지<span class="block">(차돌박이 &middot; 우삼겹)</span></td>
+            </tr>
+            <tr>
+                <td>사태</td>
+                <td rowspan="2" colspan="2" class="empty"></td>
+                <td>사태<span class="block">(아롱사태)</span></td>
+            </tr>
+            <tr class="feet">
+                <td>우족</td>
+                <td>우족</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

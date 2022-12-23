@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex Ex9</title>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header {
+            background-color: cornflowerblue;
+            color: white;
+            height: 100px;
+            font-size: 25px;
+            text-transform: capitalize;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            height: 30px;
+            padding: 0 15px;
+        }
+        nav ul li a:hover {
+            background-color: red;
+            color: white;
+        }
+        .gnb1 {
+            display: flex;
+            justify-content: center;
+        }
+        .gnb1 li a {
+            border-right: 1px solid #000;
+        }
+        .gnb2 li a {
+            border-right: none;
+            font-size: 15px;
+        }
+        main div {
+            width: 100%; height: 1000px;
+            padding-top: 50px;
+            font-size: 30px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1. nav에만 sticky 
+        2. 글자 드래그시 이벤트
+        3. 하위 메뉴
+    -->
+    <header>css navigation</header>
+    <nav>
+        <ul class="gnb1">
+            <li>
+                <a href="#">대메뉴1</a>
+                <ul class="gnb2">
+                    <li><a href="#">소메뉴1-1</a></li>
+                    <li><a href="#">소메뉴1-2</a></li>
+                    <li><a href="#">소메뉴1-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴2</a>
+                <ul class="gnb2">
+                    <li><a href="#">소메뉴2-1</a></li>
+                    <li><a href="#">소메뉴2-2</a></li>
+                    <li><a href="#">소메뉴2-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴3</a>
+                <ul class="gnb2">
+                    <li><a href="#">소메뉴3-1</a></li>
+                    <li><a href="#">소메뉴3-2</a></li>
+                    <li><a href="#">소메뉴3-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴4</a>
+                <ul class="gnb2">
+                    <li><a href="#">소메뉴4-1</a></li>
+                    <li><a href="#">소메뉴4-2</a></li>
+                    <li><a href="#">소메뉴4-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴5</a>
+                <ul class="gnb2">
+                    <li><a href="#">소메뉴5-1</a></li>
+                    <li><a href="#">소메뉴5-2</a></li>
+                    <li><a href="#">소메뉴5-3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div>배너</div>
+    </main>
+</body>
+</html>

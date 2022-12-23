@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex Ex5</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        /* .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        } */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .container footer {
+            background-color: gold;
+            /* width: 70%;
+            padding: 15px 20px; */
+
+            width: 1600px;
+            width: 83.333vw; /* https://web-development.space/tools/px-to-vw/ */
+            padding: 30px;
+            padding: 1.563vw;
+           
+            /* 부모 요소에 플렉스 적용시 자식 아이템은 margin을 통해 개별적으로 위치지정 가능 */
+            /* margin: auto; center center */
+            /* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 플렉스 아이템은 오른쪽 배치 */
+            /* margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 플렉스 아이템은 왼쪽 배치 */
+            /* margin-bottom: auto; 여백이 아래쪽으로 들어가기 때문에 플렉스 아이템은 위쪽 배치 */
+            /* margin-top: auto; 여백이 위쪽으로 들어가기 때문에 플렉스 아이템은 아래쪽 배치 */
+            margin: auto auto 0 auto; /* top right bottom left */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <footer>
+            <h2>바닥글</h2>
+            <p>설산에서 같이 품에 가는 같이, 것이다. 곳으로 무엇을 보는 칼이다. 설레는 용기가 이상이 희망의 무한한 장식하는 피다. 청춘의 노년에게서 만물은 착목한는 용기가 목숨이 그림자는 그들은 뜨거운지라, 보라. 풀이 희망의 실현에 우는 운다. 생의 같은 열매를 많이 자신과 창공에 이것은 칼이다. 그들은 앞이 피고 구할 무엇이 그들의 황금시대다. 주는 이상이 바로 이상을 끓는 반짝이는 아니한 것이다. 이상은 따뜻한 바이며, 끓는 인간에 그들을 모래뿐일 것이다.</p>
+        </footer>
+    </div>
+</body>
+</html>

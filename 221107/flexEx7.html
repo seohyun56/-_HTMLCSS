@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex Ex7</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .container {
+            background-color: lightgreen;
+            margin: 0 auto;
+            width: 700px; height: 600px;
+
+            display: flex;
+            flex-flow: wrap column;
+            /* align-items: center; 이 작업을 하지 않으면 align-items: strech;로 인해 figure가 한 줄 전체를 차지함  */
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .container figure {
+            margin: 0;
+            border: 1px #000 solid;
+        }
+        .container figure img {
+            /* 이미지는 인라인요소이기 때문에 vertical-aline이 baseline(기본값)으로 정해져 있음 */
+            vertical-align: top;
+        }
+        .container figure figcaption {
+            font-weight: bold;
+            /* text-align: center;
+            line-height: 30px; */
+            height: 30px;
+            background-color: lightseagreen;
+            color: #fff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>상하 정렬 갤러리</h1>
+    <div class="container"><!-- flex container -->
+        <figure><!-- flex item -->
+            <img src="https://via.placeholder.com/300x200/9FC5F5/000?text=img1">
+            <figcaption>Title1</figcaption>
+        </figure>
+        <figure><!-- flex item -->
+            <img src="https://via.placeholder.com/300x200/A49FF5/000?text=img2">
+            <figcaption>Title2</figcaption>
+        </figure>
+        <figure><!-- flex item -->
+            <img src="https://via.placeholder.com/300x200/CF9FF5/000?text=img3">
+            <figcaption>Title3</figcaption>
+        </figure>
+        <figure><!-- flex item -->
+            <img src="https://via.placeholder.com/300x200/F59FF0/000?text=img4">
+            <figcaption>Title4</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

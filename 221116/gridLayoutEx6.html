@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex6</title>
+    <style>
+        .box {
+            border: 6px solid #000;
+            font-weight: bold;
+            margin: 50px auto;
+            width: 80vw; height: 50vh;
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 아이템 늘려 하나의 행을 채움 */
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .item:nth-child(odd) {
+            background-color: lightskyblue;
+        }
+        .item:nth-child(even) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- 컨테이너의 크기가 아이템의 크기보다 커져도 아이템 확장 x -->
+    <!-- 컨테이너의 크기가 작아지면 아이템 자동 줄바꿈 -->
+    <div class="box">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flex Ex8</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .gallery {
+            list-style: none;
+            margin: 0 auto; 
+            padding: 0;
+            border: 6px solid #000;
+            width: 80vw;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gallery li { /* 실제 요소 크기 33.333333% */
+            width: 31.333333%;
+            margin: 1%;
+        }
+        .gallery img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .gallery h3 {
+            margin: 0;
+            background-color: lightgreen;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+    <ul class="gallery">
+        <li>
+            <img src="https://via.placeholder.com/300x200/9FC5F5/000?text=img1" alt="title1">
+            <h3>title1</h3>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/A49FF5/000?text=img2" alt="title2">
+            <h3>title2</h3>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/CF9FF5/000?text=img3" alt="title3">
+            <h3>title3</h3>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/F59FF0/000?text=img4" alt="title4">
+            <h3>title4</h3>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/F59FC5/000?text=img5" alt="title5">
+            <h3>title5</h3>
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/300x200/F5A49F/000?text=img6" alt="title6">
+            <h3>title6</h3>
+        </li>
+    </ul>
+</body>
+</html>

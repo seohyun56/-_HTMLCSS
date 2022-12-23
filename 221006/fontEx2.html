@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>font Ex2 text-shadow</title>
+    <style>
+        h2 {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 30px;
+            font-family: 'HY견고딕', '맑은 고딕', '돋움', sans-serif;
+        }
+        #title1 {
+            text-shadow: 5px 5px 5px violet; /* x축 y축 번짐 색상 */
+        }
+        #title2 {
+            text-shadow: -5px -5px 5px red;
+        }
+        #title3 {
+            text-shadow: 0px -5px 5px blue;
+        }
+        #title4 {
+            text-shadow: 5px 5px orange; /* x축 y축 (번짐) 색상 */
+        }
+        #title5 {
+            text-shadow: 0px 5px; /* 번짐 생략. 색상은 생략 시 글자의 색을 따라감 */
+            color: #BA2546;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title1">서체 그림자 Text-Shadow 1</h2>
+    <h2 id="title2">서체 그림자 Text-Shadow 2</h2>
+    <h2 id="title3">서체 그림자 Text-Shadow 3</h2>
+    <h2 id="title4">서체 그림자 Text-Shadow 4</h2>
+    <h2 id="title5">서체 그림자 Text-Shadow 5</h2>
+</body>
+</html>

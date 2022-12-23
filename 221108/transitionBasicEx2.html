@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transition basic Ex2</title>
+    <style>
+        .container {
+            list-style: none;
+            padding: 0;
+            border: 6px solid #000;
+            width: 80vw;
+            transition-property: all;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        .container li {
+            width: 10px; height: 50px;
+            margin: 5px;
+            background-color: #ddd;
+            /* font-size: 0; */
+            text-indent: -9999px;
+
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .container:hover li:nth-child(1) {
+            width: 40%;
+            background-color: lightgreen;
+        }
+        .container:hover li:nth-child(2) {
+            width: 80%;
+            background-color: lightskyblue;
+        }
+        .container:hover li:nth-child(3) {
+            width: calc(100% - 10px);
+            background-color: lightpink;
+        }
+        .container:hover li:nth-child(4) {
+            width: 60%;
+            background-color: lightseagreen;
+        }
+        .container:hover li:nth-child(5) {
+            width: 20%;
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <h1>박스 영역 위에 마우스를 올리면 그래프 진행: 크기, 색상</h1>
+    <ul class="container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

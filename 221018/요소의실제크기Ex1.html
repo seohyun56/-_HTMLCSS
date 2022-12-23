@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>요소의 실제 크기 box size Ex1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .box {
+            width: 400px; height: 200px;
+            border: 2px solid lightgreen;
+            margin: 20px auto;
+            padding: 30px;
+            outline: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>요소의 실제 크기 box size Ex1</h1>
+    <div class="box">
+        <p>가로: w400 + m0 + p(30+30) + b(2+2) = 464px</p>
+        <p>세로: h200 + m(20+20) + p(30+30) + b(2+2) = 304px</p>
+    </div>
+</body>
+</html>

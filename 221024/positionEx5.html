@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>position Ex5</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="../common/minireset.min.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@300&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* 스크롤바 가로 크기 */
+        body::-webkit-scrollbar { 
+            width: 8px; 
+        }
+        /* 스크롤바 배경 */
+        body::-webkit-scrollbar-track { 
+            background-color: white; 
+        }
+        /* 스크롤바 핸들 */
+        body::-webkit-scrollbar-thumb { 
+            background-color: lightgreen;
+            border-radius: 15px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        li {
+            display: inline-block;
+        }
+        
+        .container {
+            background-color: cornflowerblue;
+            width: 100%;
+            position: fixed;
+            top: 0; left: 0;
+        }
+
+        header {
+            font-family: 'Noto Sans KR', '맑은 고딕', 돋움, sans-serif;
+            max-width: 1240px; min-width: 960px;
+            height: 140px;
+            margin: 0 auto;
+            text-align: center;
+            /* background-color: #ddd; */
+
+            position: relative; /* 현재 요소의 흐름에 영향을 주지 않고 자식 포지션의 기준이 됨 */
+        }
+
+        /* 로고 */
+        header h1 {
+            background-color: lightgreen;
+            width: 100px; height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Do Hyeon', 돋움, sans-serif;
+
+            position: absolute;
+            left: 10px; bottom: 10px;
+        }
+        header h1 a {
+            color: #000;
+        }
+
+        /* register */
+        header #register {
+            background-color: lightpink;
+            width: 150px;
+            position: absolute;
+            right: 10px; top: 0;
+
+            padding: 4px 0;
+        }
+        header #register li {
+            padding: 0 2px;
+        }
+        header #register li a {
+            color: #000;
+            font-size: 14px;
+        }
+        header #register li a:hover {
+            color: white;
+        }
+
+        /* gnb */
+        header #gnb {
+            background-color: lightseagreen;
+            position: absolute;
+            right: 10px; bottom: 10px;
+        }
+        header #gnb li a {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-size: 24px;
+            color: white;
+
+            padding: 10px 20px;
+            display: block;
+        }
+        header #gnb li a:hover {
+            background-color: lightyellow;
+            color: #000;
+        }
+
+        main {
+            font-family: 'Raleway', sans-serif;
+            background-color: #ddd;
+            height: 3000px;
+            text-align: center;
+            margin-top:140px;
+            font-size: 5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- width: 100% -->
+    <div class="container">
+        <!-- max, min-width 중앙 정렬 -->
+        <header>
+            <h1><a href="#">로고</a></h1>
+            <ul id="register">
+                <li><a href="#">로그인</a></li>
+                <li>|</li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul id="gnb">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </header>
+    </div>
+    <main>main</main>
+</body>
+</html>

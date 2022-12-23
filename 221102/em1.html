@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>em 1</title>
+    <style>
+        body { font-weight: bold; font-size: 22px; }
+        .wrapper * {border: 3px solid #000; margin: 20px; padding: 20px; display: block; }
+        .wrapper {
+            border: 3px solid #000;
+            font-size: 1em;
+            /* 
+                브라우저 기본 폰트 사이즈 16px
+                body: 22px -> 1em: 22px
+            */
+        }
+        .wrapper > h2 {
+            font-size: 1em;
+            font-size: 1.5em; 
+            /* 1em: 16px = 1.5em: 24px  */
+            /* body22px기준: 1em == 22px
+            body22px기준: 1.5em == 33px */
+        }
+        .wrapper > h2 > span {
+            font-size: 1em; /* h2가 24px이므로 1em: 24px */
+            /* em은 바로 위의 부모 요소가 가진 font-size의 값을 1em으로 설정해서 계산 */
+            font-size: 0.9em; 
+            /* 0.9em: 21px */
+            /* body22px기준: 1em == 33px 0.9em: 29px */
+        }
+        .wrapper > p {
+            font-size: 1em;
+        }
+        .wrapper > .box {
+            font-size: 0.8em;
+            /* 1em: 16px = 0.8em: 12px */
+            /* body22px기준: 1em == 22px
+            body22px기준: 0.8em == 17px */
+        }
+        .wrapper > .box > p {
+            font-size: 1.1em;
+            /* 1em: 12px = 1.1em: 14.08px */
+            /* body22px기준: 1em == 17px
+            body22px기준: 1.1em == 18px */
+            
+        }
+        .wrapper > .box > p > span {
+            font-size: 2em;
+            /* 1em: 14px = 2em: 28px */
+            /* body22px기준: 1em == 18px
+            body22px기준: 2em == 36px */
+        }
+    </style>
+</head>
+<body>
+    <!-- http://pxtoem.com/ -->
+    <h1>em 단위 1</h1>
+    <ul>
+        <li>알파벳 M을 기준으로 만들어진 단위</li>
+        <li>부모의 폰트 사이즈를 기준으로 값 설정</li>
+        <li>브라우저의 기본 폰트 사이즈: 16px</li>
+    </ul>
+    <div class="wrapper">.wrapper: 1em == 16px<br>body22px기준: 1em == 22px
+        <h2>
+            h2: 1em == 16px<br>
+            h2: 1.5em == 24px<br>
+            body22px기준: 1em == 22px<br>
+            body22px기준: 1.5em == 33px
+            <span>span: 1em == 24px<br>span: 0.9em == 21px<br>body22px기준: 1em == 33px<br>body22px기준: 0.9em == 29px</span>
+        </h2>
+        <p>
+            p: 1em == 16px<br>body22px기준: 1em == 22px
+        </p>
+        <div class="box">.box: 1em == 16px<br>.box: 0.8em == 12px<br>body22px기준: 1em == 22px<br>body22px기준: 0.8em == 17px
+            <p>
+                p: 1em == 12px<br>p: 1.1em == 14.08px<br>body22px기준: 1em == 17px<br>body22px기준: 1.1em == 18px
+                <span>span: 1em == 14px<br>span: 2em == 28px<br>body22px기준: 1em == 18px<br>body22px기준: 2em == 36px</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

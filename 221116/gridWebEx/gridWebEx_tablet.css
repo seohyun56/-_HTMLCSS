@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.container {
+    display: grid;
+    grid-template: 42px 200px 200px 200px 200px 200px 200px 42px / repeat(4, 1fr);
+}
+
+.container header, .container footer {
+    grid-column: 1 / 5;
+    border-bottom: 1px solid #fff;
+}

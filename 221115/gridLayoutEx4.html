@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout Ex4</title>
+    <style>
+        .box {
+            font-weight: bold;
+            font-size: 1.3em;
+            width: 80vw; 
+            margin: 50px auto;
+            border: 6px solid royalblue;
+
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 14vh;
+        }
+
+        .box .span12 {
+            background-color: lightgreen;
+            grid-column: 1/13;
+        }
+        .box .span6 {
+            background-color: lightblue;
+            grid-column: 1/7;
+        }
+        .box .span4 {
+            background-color: lightpink;
+            /* 
+            grid-column: 7 / 12;
+            grid-row: 3/4; 
+            */
+            grid-column: 4/8;
+        }
+        .box .span2 {
+            background-color: lightskyblue;
+            grid-column: 3 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="span12">12</div>
+        <div class="span6">2행</div>
+        <div class="span4">3행</div>
+        <div class="span2">4행</div>
+    </div>
+</body>
+</html>

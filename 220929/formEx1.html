@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form Ex1</title>
+</head>
+<body>
+    <h1>form 연습 1</h1>
+
+    <form>
+        <fieldset>
+            <legend>상세정보:</legend>
+            <label for="userName">이름: <input type="text" name="user_name" id="userName"></label>
+            <label for="userEmail">이메일: <input type="email" name="user_email" id="userEmail"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>리뷰:</legend>
+            <!-- 
+                div는 이름 없이 쓰지 않음
+                class는 id와 다르게 여러 번 사용할 수 있음
+                  ㄴ 주로 꾸밈의 값을 줄 때 사용함
+            -->
+            <div class="title">
+                <label for="user_site">사이트를 알게 된 경위는?</label>
+            </div>
+            <select name="site" id="user_site">
+                <option value="2">방송</option>
+                <option value="3">신문</option>
+                <option value="4">직접검색</option>
+                <option value="1" selected>인터넷광고</option>
+            </select>
+            <hr>
+
+            <div class="title">다시 방문하시겠습니까?</div>
+            <input type="radio" name="visit" id="yes" value="네" checked><label for="yes">네</label>
+            <input type="radio" name="visit" id="no" value="아니요"><label for="no">아니요</label>
+            <input type="radio" name="visit" id="dontKnow" value="모름"><label for="dontKnow">모름</label>
+            <hr>
+
+            <div class="title">
+                <label for="txtBox">의견:</label>
+            </div>
+            <textarea name="txtBox" id="txtBox">여러 줄의 텍스트 박스</textarea>
+            <hr>
+
+            <input type="checkbox" name="update" id="update" value="이메일업데이트" checked><label for="update">이메일 업데이트에 가입</label>
+            <hr>
+            
+            <button type="submit">리뷰 전송</button>
+            <button type="reset">전송 취소</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>responsive video</title>
+    <style>
+        p {
+            background-color: lightblue;
+            border: 10px solid orangered; 
+            max-width: 800px;
+            min-width: 20%;
+        }
+        video { 
+            vertical-align: bottom;
+            /* 비디오는 이미지와 달리 원본 영상의 비율을 유지하기 때문에 width, height 값을 동시에 적용시킬 수 없음
+            width: 800px; height: 500px; */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>가변 비디오</h1>
+    <p><video src="./images/code.mp4" muted autoplay loop></video></p>
+</body>
+</html>

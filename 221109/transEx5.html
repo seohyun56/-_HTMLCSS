@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>trans Ex5</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrapper {
+            display: flex;
+        }
+        .wrapper .gnb {
+            background-color: lightgreen;
+            margin: 0;
+            padding: 100px 40px;
+            transition: .7s;
+            position: relative;
+        }
+        .wrapper .gnb::after {
+            content: "";
+            width: 0; height: 0;
+            border-top: none;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+            border-bottom: solid 20px lightcoral;
+            transform: rotate(90deg);
+
+            position: absolute;
+            top: 30px; right: 10px;
+        }
+        .wrapper .gnb:hover {
+            cursor: pointer;
+            width: 25vw;
+        }
+        .wrapper .gnb li {
+            padding: 10px;
+        }
+        .wrapper .gnb li a {
+            text-decoration: none;
+            color: #000;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        .wrapper .gnb li a:hover {
+            color: white;
+        }
+        .wrapper .box {
+            background-color: lightskyblue;
+            width: 50vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="gnb">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

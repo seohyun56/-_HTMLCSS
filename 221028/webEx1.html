@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>web Ex1</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        .container {
+            width: 900px;
+            background-color: bisque;
+            margin: 0 auto;
+            border: 5px solid lightcoral;
+        }
+        header {
+            background-color: violet;
+
+            position: relative;
+        }
+        footer {
+            background-color: violet;
+            padding: 10px;
+            font-weight: bold;
+        }
+        header h1, h2 {
+            margin: 0;
+        }
+        header h1 {
+            margin: auto;
+            height: 120px;
+            background-image: url(./images/logo.png);
+            background-size: 100px;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 10px; left: 10px;
+            padding-left: 110px;
+        }
+        header h2 {
+            font-family: 'Abril Fatface', cursive;
+            position: absolute;
+            top: 55px; left: 120px;
+            font-size: 30px;
+        }
+        header h2:nth-child(2) {
+            font-family: 'Lobster', cursive;
+            position: absolute;
+            top: 20px; left: 120px;
+            font-size: 40px;
+        }
+        nav ul {
+            list-style: none;
+            width: 900px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: yellow;
+            font-weight: bold;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: violet;
+        }
+        nav ul li a:hover {
+            background-color: white;
+        }
+        .container main {
+            margin: auto;
+            overflow: hidden;
+            /* background-color: darkgray; */
+        }
+        main figure {
+            text-align: center;
+            border: 1px solid orange;
+            width: 256px;
+            padding: 5px;
+            margin: 30px;
+            background-color: #fff;
+            
+        }
+        main figure img {
+            width: 250px;
+        }
+        main figure figcaption {
+            text-align: right;
+            font-style: italic;
+        }
+        main article {
+            float: left;
+            width: 256px;
+            margin: 30px;
+        }
+        main article h4 {
+            color: red;
+        }
+        main aside {
+            float: left;
+            width: 256px; 
+            background-color: white;
+            padding: 30px 15px;
+            border-left: 1px solid red;
+            padding-left: 0;
+
+            text-indent: 20px;
+        }
+        main aside ul {
+            list-style: none;
+            padding: 0;
+            width: 271px;
+        }
+        main aside ul li a {
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000;
+            width: 271px;
+            padding: 10px 0;
+            border-bottom: 1px solid red;
+        }
+        main aside li a:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1></h1>
+            <!-- <h1>Kim's kitchen<br>cooking class</h1> -->
+            <h2>Kim's kitchen</h2>
+            <h2>cooking class</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">교실</a></li>
+                <li><a href="#">케이터링</a></li>
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </nav>
+        <main>
+            <figure>
+                <img src="./images/plants.jpg">
+                <figcaption>Oriental Saled</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/bgEx2.jpg">
+                <figcaption>Soy Sauce</figcaption>
+            </figure>
+            <article>
+                <h3>채식주의자</h3>
+                <h4>런던에서의 5주 코스</h4>
+                <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
+            </article>
+            <article>
+                <h3>소스 마스터클래스</h3>
+                <h4>1일 워크샵</h4>
+                <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
+            </article>
+            <aside>
+                <h2>인기요리법</h2>
+                <ul>
+                    <li><a href="#">후라이드</a></li>
+                    <li><a href="#">고추바사삭</a></li>
+                    <li><a href="#">양념치킨</a></li>
+                    <li><a href="#">강정</a></li>
+                </ul>
+                <h2>연락처</h2>
+                <p>경기 수원시 팔달구 매산동</p>
+            </aside>
+        </main>
+        <footer>&copy; Kim's kitchen 김씨네 키친</footer>
+    </div>
+</body>
+</html>

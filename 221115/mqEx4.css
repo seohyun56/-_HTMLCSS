@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/* @media () {} html 문서 링크에 미디어값을 작성했기 때문에 css 문서에서는 불필요 */
+.apple_watch {
+    flex-direction: row;
+}
